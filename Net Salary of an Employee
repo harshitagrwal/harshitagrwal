@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){                        float tax, gross_salary, net_salary;
+    printf("\t\t\t\t\t\t\t\t\t\t\aNet Salary of an Employee");
+    printf("\n\nEnter Gross Salary of an employee:    Rs.");
+    scanf("%f",&gross_salary);
+    printf("\nEmployee Gross Salary:                Rs.%9.2f",gross_salary);
+    if(gross_salary<10000)
+    {
+        net_salary = gross_salary;
+    }
+    if(gross_salary>=10000)
+    {
+        tax = gross_salary * 0.15;
+        net_salary = gross_salary = tax;
+        printf("\n\nTax:                                  Rs.%2.0f",tax);
+    }
+    if(gross_salary<10000)
+    {
+        printf("\n\nTax:                                  Rs.0");
+    }
+    printf("\n\n\aNet Salary:                           Rs.%1.2f",net_salary);
+}
